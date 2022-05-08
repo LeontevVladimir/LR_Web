@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Задание 6</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+var u1 = 0;
+var u2 = 0;
+var u3 = 0;
+
+function q1(){
+u1 = u1+1;
+}
+
+function q2(){
+u2 = u2+1;
+}
+
+function q3(){
+u3 = u3+1;
+}
+
+function result(){
+var rez = u1+u2+u3;
+var u1_pct = Math.round((u1/rez)*100);
+var u2_pct = Math.round((u2/rez)*100);
+var u3_pct = Math.round((u3/rez)*100);
+$("#r").html("Всего проголосовало: "+rez);
+$("#u_1").html("За honda civic typer r: "+u1_pct+"%");
+$("#u_2").html("За toyota supra: "+u2_pct+"%");
+$("#u_3").html("За nissan silvia s15: "+u3_pct+"%");
+}
+</script>
+
+<style type="text/css">
+	img{
+		height: 200px;
+		width: 200px;
+	}
+</style>
+
+</head>
+<body>
+	<form>
+		<h1><strong>Автомобильный опрос</strong></h1></br>
+		<h2><strong>Какая машина вам нравится?</strong></h2></br>
+		<img src="img/supra.jpg" alt="1">
+		<input class="button" type="button" onclick="q1()" id="rad1" value="Supra"></br>
+		<img src="img/silvia.jpg" alt="2">
+		<input class="button" type="button" onclick="q2()" id="rad2" value="Silvia"></br>
+		<img src="img/civic.jpg" alt="3">
+		<input class="button" type="button" onclick="q3()" id="rad3" value="Civic"></br></br>
+		<input class="result" type="button" id="rez" onclick="result()" value="Результаты">
+		<p id="r"></p>
+		<p id="u_1"></p>
+		<p id="u_2"></p>
+		<p id="u_3"></p>
+	</form>
+</body>
+</html>

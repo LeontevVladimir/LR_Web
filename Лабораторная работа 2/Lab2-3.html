@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Задание 3</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+body{
+	background-image: url(img/background.jpg);
+	background-size: 100%;
+}
+.picture{
+	position: absolute;
+    width: 150px;
+	height: 150px;
+	top: 250px;
+	left: 700px;
+}
+.up{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.down{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.left{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.right{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+</style>
+
+<script>
+function up(){
+	$("#pic").animate({top: "150px"}, 500);
+}
+
+function down(){
+	$("#pic").animate({top: "350px"}, 500);
+}
+function left(){
+	$("#pic").animate({left: "600px"}, 500);
+}
+
+function right(){
+	$("#pic").animate({left: "800px"}, 500);
+}
+</script>
+
+</head>
+<body>
+	<img class="picture" src="img/kartinka.jpg" id="pic">
+	<input class="up" type="button" id="up" onclick="up()" value="Вверх" >
+	<input class="down" type="button" id="down" onclick="down()" value="Вниз">
+	<input class="left" type="button" id="left" onclick="left()" value="Лево">
+	<input class="right" type="button" id="right" onclick="right()" value="Право">
+</body>
+</html>

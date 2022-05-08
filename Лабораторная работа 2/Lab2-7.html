@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Задание 7</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function (){
+var calc = $('.calculator');
+var calcDisplay = calc.find('.calc_vivod');
+var calcKeys = calc.find('.calc_key');
+var calcPlus = calc.find('.calc_plus');
+var calcClear = calc.find('.calc_clear');
+var calcEqual = calc.find('.calc_key--equal');
+var calcPow = calc.find('.calc_mathpow');
+var calcBack = calc.find('.calc_backspace');
+
+calcKeys.each(function (){
+var current = $(this).attr('value');
+$(this).text(current);
+});
+
+calcPlus.on('click', function (){
+calcDisplay.val( calcDisplay.val() + $(this).attr('value') );
+});
+
+calcClear.on('click', function (){
+calcDisplay.val('');
+});
+
+calcEqual.on('click', function (){
+calcDisplay.val( eval( calcDisplay.val() ) );
+});
+
+calcPow.on('click', function (){
+calcDisplay.val( Math.pow( calcDisplay.val(), 2 ) );
+});
+
+calcBack.on('click', function (){
+calcDisplay.val( calcDisplay.val().substring(0, calcDisplay.val().length-1) );
+});
+
+});
+</script>
+</head>
+<body>
+<div class="calculator">
+<form class="calcForm">
+    <div class="calcRow">
+        <input class="calc_vivod" id="display" type="text" disabled />
+    </div>
+
+    <div class="calcRow">
+        <button type="button" value="c" class="calc_key calc_clear"></button>
+        <button type="button" value="<<" class="calc_key calc_backspace"></button>
+        <button type="button" value="^2" class="calc_key calc_mathpow"></button>
+        <button type="button" value="+" class="calc_key calc_plus"></button>
+    </div>
+
+    <div class="calcRow">
+        <button type="button" value="1" class="calc_key calc_plus"></button>
+        <button type="button" value="2" class="calc_key calc_plus"></button>
+        <button type="button" value="3" class="calc_key calc_plus"></button>
+        <button type="button" value="-" class="calc_key calc_plus"></button>
+    </div>
+
+    <div class="calcRow">
+        <button type="button" value="4" class="calc_key calc_plus"></button>
+        <button type="button" value="5" class="calc_key calc_plus"></button>
+        <button type="button" value="6" class="calc_key calc_plus"></button>
+        <button type="button" value="*" class="calc_key calc_plus"></button>
+    </div>
+
+    <div class="calcRow">
+        <button type="button" value="7" class="calc_key calc_plus"></button>
+        <button type="button" value="8" class="calc_key calc_plus"></button>
+        <button type="button" value="9" class="calc_key calc_plus"></button>
+        <button type="button" value="/" class="calc_key calc_plus"></button>
+    </div>
+
+    <div class="calcRow">
+        <button type="button" value="0" class="calc_key calc_plus"></button>
+        <button type="button" value="." class="calc_key calc_plus"></button>
+        <button type="button" value="=" class="calc_key calc_key--equal"></button>
+    </div>
+</form>
+</div>
+</body>
+</html>

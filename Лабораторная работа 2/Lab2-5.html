@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Задание 5</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+body{
+	background-size: 100%;
+}
+.car{
+	width: 100px;
+	height: 100px;
+}
+</style>
+
+</head>
+<body>
+<img class="car" src="img/car.png" id="car">
+
+<script>
+
+var img = document.getElementById("car");
+
+img.onmousedown = function(e) {
+var coords = getCoords(img);
+var shiftX = e.pageX - coords.left;
+var shiftY = e.pageY - coords.top;
+img.style.position = 'absolute';
+document.body.appendChild(img);
+moveAt(e);
+img.style.zIndex = 1000;
+
+function moveAt(e) {
+img.style.left = e.pageX - shiftX + 'px';
+img.style.top = e.pageY - shiftY + 'px';
+}
+
+document.onmousemove = function(e) {
+moveAt(e);
+};
+
+img.onmouseup = function() {
+document.onmousemove = null;
+img.onmouseup = null;
+};
+}
+
+img.ondragstart = function() {
+return false;
+};
+
+function getCoords(elem) { 
+var box = elem.getBoundingClientRect();
+return {
+top: box.top + pageYOffset,
+left: box.left + pageXOffset
+};
+}
+</script> 
+</body>
+</html>
