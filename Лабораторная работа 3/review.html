@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Комментарии</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/main_review.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="content_box">
+			<div class="header_items">
+				<a href="index.html">
+				<img src="img/pngtree-vector-car-icon-png-image_1028600.jpg" alt="Главная страница" class="logo_img">
+				</a>
+			</div>
+		</div> 
+	</header>
+
+	<main class="main">
+		<div class="content_box">
+			<div id="main__items">
+					<form name="review__form" class="review_form">
+						<div class="main_title">
+						<h2>Напишите свой отзыв!</h2>
+						</div>
+
+						<label for="name">Ваше имя:</label>
+						<input id="name" type="text" name="name" placeholder="ФИО">
+
+						<label for="email">Ваша почта:</label>
+						<input id="email" type="email" name="email" placeholder="xxx.@gmail.com">
+
+						<label for="text">Ваш отзыв:</label>
+						<textarea id="text" placeholder="Расскажите о вашем автомобиле!"></textarea>
+						<input id="btn" type="button" name="submit" class="btn_submit" value="Опубликовать" />
+					</form>
+			</div>
+
+			<div class="review_title">
+						Отзывы
+			</div>
+
+				<div id="place_review">
+				</div>
+		</div>
+	</main>
+
+</body>
+</html>
