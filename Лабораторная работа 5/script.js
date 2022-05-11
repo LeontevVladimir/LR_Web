@@ -11,31 +11,31 @@
 				alert("Игра еще не закончена, доиграйте или нажмите сдаться")
 			} else {
         	kolvo = $("#kost").val();
-        	if (kolvo == 1) {
-        	$("#dice-side-1").animate({opacity:"hide"},"slow");
-        	$("#dice-side-3").animate({opacity:"hide"},"slow");
+          	if (kolvo == 1) {
+        	$("#dice1").animate({opacity:"hide"},"slow");
+        	$("#dice3").animate({opacity:"hide"},"slow");
         	gamePlaying=true;
 		    score1=0;
 		    score2=0;
 		    hod=0;
-		    $("#dice-side-2").html(" ");
-			$("#dice-side-4").html(" ");
+		    $('#dice2').attr('src', 'img/dicedefault.png');
+			$('#dice4').attr('src', 'img/dicedefault.png');
 			$("#nomerhoda").html('Ход ' + hod);
 		    $("#status").html('Вам выпало:');
 			$("#statuscomp").html('Выпало компьютеру:');
 		    $("#status1").html('Ваш счет:' + score1 + '.');
 			$("#status2").html('Счет компьютера:' + score2 + '.');
 		} else if (kolvo == 2) {
-			$("#dice-side-1").animate({opacity:"show"},"slow");
-			$("#dice-side-3").animate({opacity:"show"},"slow");
+			$("#dice1").animate({opacity:"show"},"slow");
+			$("#dice3").animate({opacity:"show"},"slow");
 			gamePlaying=true;
 		    score1=0;
 		    score2=0;
 		    hod=0;
-		    $("#dice-side-1").html(" ");
-			$("#dice-side-2").html(" ");
-			$("#dice-side-3").html(" ");
-			$("#dice-side-4").html(" ");
+		    $('#dice1').attr('src', 'img/dicedefault.png');
+		    $('#dice2').attr('src', 'img/dicedefault.png');
+		    $('#dice3').attr('src', 'img/dicedefault.png');
+		    $('#dice4').attr('src', 'img/dicedefault.png');
 			$("#nomerhoda").html('Ход ' + hod);
 			$("#status").html('Вам выпало:');
 			$("#statuscomp").html('Выпало компьютеру:');
@@ -52,10 +52,10 @@
         	score1=0;
 		    score2=0;
 		    hod=0;
-		    $("#dice-side-1").html(" ");
-			$("#dice-side-2").html(" ");
-			$("#dice-side-3").html(" ");
-			$("#dice-side-4").html(" ");
+		    $('#dice1').attr('src', 'img/dicedefault.png');
+		    $('#dice2').attr('src', 'img/dicedefault.png');
+		    $('#dice3').attr('src', 'img/dicedefault.png');
+		    $('#dice4').attr('src', 'img/dicedefault.png');
 			$("#nomerhoda").html('Ход ' + hod);
         	$("#status").html('Вам выпало:');
 			$("#statuscomp").html('Выпало компьютеру:');
@@ -83,10 +83,10 @@
 		const side4 = Math.floor( Math.random() * 6 ) + 1;
         const diceTotal = side1 + side2;
 		const diceTotal2 = side3 + side4;
-				$("#dice-side-1").html(side1);
-				$("#dice-side-2").html(side2);
-				$("#dice-side-3").html(side3);
-				$("#dice-side-4").html(side4);
+		$('#dice1').attr('src', 'img/dice-'+side1+'.png');
+		$('#dice2').attr('src', 'img/dice-'+side2+'.png');
+		$('#dice3').attr('src', 'img/dice-'+side3+'.png');
+		$('#dice4').attr('src', 'img/dice-'+side4+'.png');
 				$("#nomerhoda").html('Ход ' + hod);
 				$("#status").html('Вам выпало:' + diceTotal + '.');
 				$("#statuscomp").html('Выпало компьютеру:' + diceTotal2 + '.');
@@ -103,8 +103,8 @@
 			const side1 = Math.floor( Math.random() * 6 ) + 1;
         	const side2 = Math.floor( Math.random() * 6 ) + 1;
         	hod+=1;
-					$("#dice-side-2").html(side1);
-					$("#dice-side-4").html(side2);
+        		$('#dice2').attr('src', 'img/dice-'+side1+'.png');
+				$('#dice4').attr('src', 'img/dice-'+side2+'.png');
 					$("#nomerhoda").html('Ход ' + hod);
 					$("#status").html('Вам выпало:' + side1 + '.');
 					$("#statuscomp").html('Выпало компьютеру:' + side2 + '.');

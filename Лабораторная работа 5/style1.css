@@ -16,7 +16,6 @@ body {
     justify-content: space-between;
     color:  #000000;
 }
-
 .column {
     display: flex;
     align-items: center;
@@ -122,73 +121,40 @@ font-size: 20px;
         box-shadow: 0 0 5px;
         font-size: 25px;
 }
-#dice-side-1 {
+#dice1 {
     position: absolute;
         left: 33%;
         top: 4rem;
-     width: 70px;
-    height: 50px;
-    background-color: lightcoral;
-    border: 1px solid black;
-    padding: 10px;
-    font-size: 50px;
-    text-align: center;
-    margin: 5px;
+     width: 80px;
+    height: 70px;
     border-radius: 5px;
-    color:  #000000;
     box-shadow: 5px 5px;
 }
-#dice-side-2 {
+#dice2 {
     position: absolute;
         left: 39%;
         top: 4rem;
-     width: 70px;
-    height: 50px;
-    background-color: lightcoral;
-    border: 1px solid black;
-    padding: 10px;
-    font-size: 50px;
-    text-align: center;
-    margin: 5px;
+     width: 80px;
+    height: 70px;
     border-radius: 5px;
-    color:  #000000;
     box-shadow: 5px 5px;
 }
-#dice-side-3 {
+#dice3 {
     position: absolute;
         left: 55%;
         top: 4rem;
-     width: 70px;
-    height: 50px;
-    background-color: lightcoral;
-    border: 1px solid black;
-    padding: 10px;
-    font-size: 50px;
-    text-align: center;
-    margin: 5px;
+     width: 80px;
+    height: 70px;
     border-radius: 5px;
-    color:  #000000;
     box-shadow: 5px 5px;
 }
-#dice-side-4 {
+#dice4 {
     position: absolute;
         left: 61%;
         top: 4rem;
-     width: 70px;
-    height: 50px;
-    background-color: lightcoral;
-    border: 1px solid black;
-    padding: 10px;
-    font-size: 50px;
-    text-align: center;
-    margin: 5px;
+     width: 80px;
+    height: 70px;
     border-radius: 5px;
-    color:  #000000;
     box-shadow: 5px 5px;
 }
-
-.dice-roll {
-    cursor: pointer;
-    text-transform: capitalize;
-    color:  #000000;
 }
