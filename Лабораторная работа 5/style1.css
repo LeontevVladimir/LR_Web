@@ -1,0 +1,194 @@
+body {
+    background-image: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.wrapper {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    color:  #000000;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    color:  #000000;
+}
+#nomerhoda {
+    position: absolute;
+    top: -2rem;
+        left: 50%;
+        font-size: 45px;
+        transform: translateX(-50%);
+        text-align: center;
+}
+#status {
+    position: absolute;
+    top: 9rem;
+		left: 39%;
+		transform: translateX(-50%);
+    min-width: 400px;
+    margin: 0;
+		text-align: center;
+}
+#statuscomp {
+   position: absolute;
+    top: 9rem;
+        left: 62%;
+        transform: translateX(-50%);
+    min-width: 400px;
+    margin: 0;
+        text-align: center;
+        color:  #000000;
+        color:  red;
+}
+#status1 {
+    position: absolute;
+    top: 11rem;
+		left: 39%;
+		transform: translateX(-50%);
+    min-width: 400px;
+    margin: 0;
+		text-align: center;
+        color:  #000000;
+}
+#status2 {
+    position: absolute;
+    top: 11rem;
+		left: 62%;
+		transform: translateX(-50%);
+    min-width: 400px;
+    margin: 0;
+		text-align: center;
+        color:  #000000;
+        color:  red;
+}
+.startgame {
+    position: absolute;
+    top: 16rem;
+        left: 47%;
+font-size: 20px;
+        text-align: center;
+        color:  #000000;
+        box-shadow: 5px 5px;
+        width: 160px;
+}
+.concede {
+    position: absolute;
+    top: 25rem;
+        left: 47%;
+font-size: 20px;
+        text-align: center;
+        color:  #000000;
+        box-shadow: 5px 5px;
+        width: 160px;
+        height: 50px;
+        color:  red;
+}
+.throw {
+    position: absolute;
+    top: 14rem;
+        left: 47%;
+font-size: 20px;
+        text-align: center;
+        color:  #000000;
+        box-shadow: 5px 5px;
+        width: 160px;
+}
+#kubik {
+    position: absolute;
+    top: 18rem;
+        left: 43%;
+        text-align: center;
+        color:  #000000;
+        font-weight: bold;
+        font-size: 20px;
+}
+#kost {
+    position: absolute;
+    top: 20rem;
+        left: 50%;
+         width: 45px;
+        text-align: left;
+        color:  #000000;
+        box-shadow: 0 0 5px;
+        font-size: 25px;
+}
+#dice-side-1 {
+    position: absolute;
+        left: 33%;
+        top: 4rem;
+     width: 70px;
+    height: 50px;
+    background-color: lightcoral;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    color:  #000000;
+    box-shadow: 5px 5px;
+}
+#dice-side-2 {
+    position: absolute;
+        left: 39%;
+        top: 4rem;
+     width: 70px;
+    height: 50px;
+    background-color: lightcoral;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    color:  #000000;
+    box-shadow: 5px 5px;
+}
+#dice-side-3 {
+    position: absolute;
+        left: 55%;
+        top: 4rem;
+     width: 70px;
+    height: 50px;
+    background-color: lightcoral;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    color:  #000000;
+    box-shadow: 5px 5px;
+}
+#dice-side-4 {
+    position: absolute;
+        left: 61%;
+        top: 4rem;
+     width: 70px;
+    height: 50px;
+    background-color: lightcoral;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 50px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+    color:  #000000;
+    box-shadow: 5px 5px;
+}
+
+.dice-roll {
+    cursor: pointer;
+    text-transform: capitalize;
+    color:  #000000;
+}
