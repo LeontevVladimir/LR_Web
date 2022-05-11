@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="js/jquery-ui-1.13.1.custom/jquery-ui.css">
+	<link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+	<script src="js/script.js"></script>
+
+	<title>Магазин автозапчастей</title>
+</head>
+<body>
+	<header>
+		<div class="head_items">
+		</div>
+	</header>
+	<main>
+			<div class="title">
+			<h3>Магазин автозапчастей</h3>
+			</div>
+			<div class="main_items">
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">Генератор</a></li>
+				<li><a href="#tabs-2">Свеча зажигания</a></li>
+				<li><a href="#tabs-3">Воздушный фильтр</a></li>
+			</ul>
+		<div id="tabs-1">
+				<h2>Генератор</h2>
+				<div class="img"><img src="img/generator.png" alt="Генератор"></div>
+				<p>Генератор автомобиля – это устройство, которое способно преобразовывать механическую энергию, создаваемую двигателем в электрическую энергию, которая в свою очередь питает все энергозависимые системы автомобиля.
+
+				<p>Характеристики
+				<ul>
+				<li>Производитель: "КЗАТЭ";</li>
+
+				<li>Номинальное напряжение: 14 В;</li>
+
+				<li>Сила тока: 110 А.</li>
+
+				<li>В комплекте: 1 генератор.</li>
+
+				<li>Срок гарантии: 3 года.</li>
+				</ul>
+			</div>
+
+			<div id="tabs-2">
+					<h2>Свеча зажигания</h2>
+					<div class="img"><img src="img/svecha.png" alt="Свеча зажигания"></div>
+					<p>Свеча зажигания — устройство для воспламенения топливо-воздушной смеси в самых разнообразных тепловых двигателях.
+					<p>Техническая информация:
+					<ul>
+					<li>Тип двигателя - Бензиновый</li>
+
+					<li>Количество электродов массы - 1</li>
+
+					<li>Зазор между электродами, мм - 0.8</li>
+
+					<li>Материал наконечника среднего электрода - сплав никеля</li>
+
+					<li>Ширина зева гаечного ключа - 20,8</li>
+
+					<li>Калильное число - 20</li>
+					</ul>
+			</div>
+
+			<div id="tabs-3">
+				<h2>Воздушный фильтр</h2>
+					<div class="img"><img src="img/filtr.png" alt="Свеча зажигания"></div>
+					<p>Фильтр воздушный "BOSCH" предназначен для очистки поступающего в двигатель воздуха от пыли, песчинок и любых других мелких и твердых частиц, поступающих в двигатель. Устанавливается на автомобилях с инжекторным двигателем.
+
+					<p>Характеристики:
+					<ul>
+					<li>Производитель: "BOSCH";</li>
+
+					<li>Длина: 213 мм;</li>
+
+					<li>Ширина: 213 мм;</li>
+
+					<li>Высота: 58 мм;</li>
+
+					<li>Исполнение фильтра: фильтр-патрон.</li>
+
+					<li>В комплекте: 1 фильтр.</li>
+					</ul>
+			</div>
+		</div>
+
+		<div class="title">
+			<h3>Хиты продаж:</h3>
+		</div>
+	<div class="container content" id="acc_con">
+	<div class="stage" id="accordion">
+		<h3>Автоковрики "EVA STANDART"</h3>
+		<div>
+		<p>Цена: 600 руб.
+		</div>
+
+		<h3>Черные накладки на передний бампер (антихром) для Лады Гранты</h3>
+		<div>
+		<p>Цена: 1511 руб.
+		</div>
+
+		<h3>Противотуманные фары 4 линзы LED для ВАЗ 2110-2112, 2113-2115</h3>
+		<div>
+		<p>Цена: 2 890 руб.
+		</div>
+
+		<h3>Накладка на передний бампер для CHEVROLET CRUZE </h3>
+		<div>
+		<p>Цена: 2590 руб.
+		</div>
+		</div>
+		</div>
+
+		<div id="dialog" class="dialog" title="Оформление заказа">
+		<form class="form-inline">
+		<div class="form-group">
+		<label >ФИО</label>
+		<input type="text" name="FIO" id="fio">
+		<p>
+		<label for="amount">Количество запчастей</label>
+		<input type="text" name="amount" id="amount">
+		<p>
+		<div id="slider_amount"></div>
+
+		<p>
+		<label for="sparepart">Выберите запчасть</label>
+		<input type="text" name="sparepart" list="lst" id="sparepart">
+		<datalist id="lst">
+		<option value="Генератор">
+		<option value="Свеча зажигания">
+		<option value="Воздушный фильтр">
+		</datalist>
+		<p>
+		<label for="date">Дата доставки </label>
+		<input type="text" class="form-control" id="date">
+		<p>
+		<label>Введите город: </label>
+		<input type="text" class="form-control" id="gorod">
+		<p>
+			<label for="gorod">Введите адрес: </label>
+		<input type="text" id="address">
+		<p>
+
+		<input type="text" id="promo"placeholder="Промокод"><span id="tip" title="Введите промокод для скидки"> ?</span>
+		<p>
+		</div>
+		</form>
+		</div>
+		<button class="btn" id="create" >Оформить заказ</button>
+		</div>
+	</div>
+	</div>
+</main>
+
+<div id="conf" title="Подтверждение" style="display: none;">
+
+			<label for="sp_fio">ФИО: </label>
+			<input type="text" name="sp_fio" id="sp_fio">
+<br><br>
+			<label for="sp_amount">Количество запчастей: </label>
+			<input type="text" name="sp_amount" id="sp_amount">
+<br><br>
+
+			<label for="sp_spare_part">Запчасть: </label>
+			<input type="text" name="sp_spare_part" id="sp_spare_part">
+<br><br>
+			<label for="sp_date">Дата доставки: </label>
+			<input type="text" name="sp_date" id="sp_date">
+<br><br>
+			<label for="sp_gorod">Город: </label>
+			<input type="text" name="sp_gorod" id="sp_gorod">
+<br><br>
+			<label for="sp_address">Адрес: </label>
+			<input type="text" name="sp_address" id="sp_address">
+<br><br>
+			<label for="price">Сумма: </label>
+			<input type="text" name="price" id="price">
+
+
+	</div>
+
+	<div id="oform" title="Уведомление" style="display: none;"><h2>Ваш заказ оформлен</h2></div>
+
+</body>
+</html>
